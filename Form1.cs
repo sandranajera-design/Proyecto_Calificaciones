@@ -16,5 +16,17 @@ namespace Proyecto_Calificaciones
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            //Si se hicieron cambis, si funciona Git
+            //un Elefante se columpiaba sore la tela de una araña
+            // Como veia que resistia fueron a llamar a otro elefante
+        }
     }
 }

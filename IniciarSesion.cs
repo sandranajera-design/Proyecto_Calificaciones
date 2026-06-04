@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Calificaciones
 {
-    public partial class Form1 : Form
+    public partial class IniciarSesion : Form
     {
-        public Form1()
+        public IniciarSesion()
         {
             InitializeComponent();
         }

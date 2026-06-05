@@ -47,7 +47,6 @@
             this.label1.Size = new System.Drawing.Size(119, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bienvenido";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
@@ -61,10 +60,10 @@
             // 
             // btnIniciarSesion
             // 
-            this.btnIniciarSesion.Location = new System.Drawing.Point(835, 370);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(702, 372);
             this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(6);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(150, 44);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(283, 57);
             this.btnIniciarSesion.TabIndex = 2;
             this.btnIniciarSesion.Text = "Iniciar sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
@@ -103,6 +102,7 @@
             this.btnRegistrarse.TabIndex = 7;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // label4
             // 
@@ -132,7 +132,6 @@
             this.Name = "IniciarSesion";
             this.Text = "IniciarSesion";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

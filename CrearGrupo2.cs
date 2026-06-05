@@ -16,5 +16,14 @@ namespace Proyecto_Calificaciones
         {
             InitializeComponent();
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            CrearGrupo3 form = new CrearGrupo3();
+            form.Show();
+
+            this.Hide();
+
+        }
     }
 }

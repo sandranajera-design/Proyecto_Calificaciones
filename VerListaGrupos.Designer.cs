@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Calificaciones
 {
-    partial class CrearGrupo4
+    partial class VerListaGrupos
     {
         /// <summary>
         /// Required designer variable.
@@ -37,12 +37,12 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.panelSistema = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEliminarAlumno = new System.Windows.Forms.Button();
+            this.btnModificarAlumno = new System.Windows.Forms.Button();
             this.btnCapturarCalificaciones = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSistema.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -55,7 +55,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(355, 831);
+            this.panelMenu.Size = new System.Drawing.Size(355, 699);
             this.panelMenu.TabIndex = 7;
             // 
             // btnSalir
@@ -126,58 +126,65 @@
             // 
             // panelSistema
             // 
-            this.panelSistema.Controls.Add(this.dataGridView1);
-            this.panelSistema.Controls.Add(this.label1);
             this.panelSistema.Controls.Add(this.btnCapturarCalificaciones);
+            this.panelSistema.Controls.Add(this.btnModificarAlumno);
+            this.panelSistema.Controls.Add(this.label1);
+            this.panelSistema.Controls.Add(this.btnEliminarAlumno);
             this.panelSistema.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSistema.Location = new System.Drawing.Point(355, 0);
             this.panelSistema.Name = "panelSistema";
-            this.panelSistema.Size = new System.Drawing.Size(1204, 831);
+            this.panelSistema.Size = new System.Drawing.Size(1248, 699);
             this.panelSistema.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(474, 148);
+            this.label1.Location = new System.Drawing.Point(449, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 25);
+            this.label1.Size = new System.Drawing.Size(201, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Calificaciones";
+            this.label1.Text = "¿Que desea hacer?";
+            // 
+            // btnEliminarAlumno
+            // 
+            this.btnEliminarAlumno.Location = new System.Drawing.Point(433, 165);
+            this.btnEliminarAlumno.Name = "btnEliminarAlumno";
+            this.btnEliminarAlumno.Size = new System.Drawing.Size(231, 85);
+            this.btnEliminarAlumno.TabIndex = 4;
+            this.btnEliminarAlumno.Text = "Eliminar alumno";
+            this.btnEliminarAlumno.UseVisualStyleBackColor = true;
+            // 
+            // btnModificarAlumno
+            // 
+            this.btnModificarAlumno.Location = new System.Drawing.Point(433, 305);
+            this.btnModificarAlumno.Name = "btnModificarAlumno";
+            this.btnModificarAlumno.Size = new System.Drawing.Size(231, 85);
+            this.btnModificarAlumno.TabIndex = 5;
+            this.btnModificarAlumno.Text = "Modificar alumno";
+            this.btnModificarAlumno.UseVisualStyleBackColor = true;
             // 
             // btnCapturarCalificaciones
             // 
-            this.btnCapturarCalificaciones.Location = new System.Drawing.Point(408, 589);
+            this.btnCapturarCalificaciones.Location = new System.Drawing.Point(405, 438);
             this.btnCapturarCalificaciones.Name = "btnCapturarCalificaciones";
-            this.btnCapturarCalificaciones.Size = new System.Drawing.Size(349, 85);
-            this.btnCapturarCalificaciones.TabIndex = 4;
+            this.btnCapturarCalificaciones.Size = new System.Drawing.Size(282, 85);
+            this.btnCapturarCalificaciones.TabIndex = 6;
             this.btnCapturarCalificaciones.Text = "Capturar calificaciones";
             this.btnCapturarCalificaciones.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(112, 217);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(908, 288);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // CrearGrupo4
+            // VerListaGrupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1559, 831);
+            this.ClientSize = new System.Drawing.Size(1603, 699);
             this.Controls.Add(this.panelSistema);
             this.Controls.Add(this.panelMenu);
-            this.Name = "CrearGrupo4";
-            this.Text = "CrearGrupo4";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "VerListaGrupos";
+            this.Text = "VerListaGrupos";
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelSistema.ResumeLayout(false);
             this.panelSistema.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,8 +199,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Panel panelSistema;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCapturarCalificaciones;
+        private System.Windows.Forms.Button btnModificarAlumno;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnEliminarAlumno;
     }
 }

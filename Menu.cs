@@ -27,6 +27,8 @@ namespace Proyecto_Calificaciones
             this.Hide();
         }
 
+        /* salir del programa con message box para confirmar
+         */
         private void btnSalir_Click(object sender, EventArgs e)
         {
             DialogResult respuesta = MessageBox.Show("¿Desea salir del programa?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

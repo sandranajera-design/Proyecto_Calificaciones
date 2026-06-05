@@ -95,6 +95,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapturarCalificaciones1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapturarCalificaciones1.Designer.cs">
+      <DependentUpon>CapturarCalificaciones1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapturarCalificaciones2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapturarCalificaciones2.Designer.cs">
+      <DependentUpon>CapturarCalificaciones2.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearGrupo1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,18 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarAlumno1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarAlumno1.Designer.cs">
+      <DependentUpon>ModificarAlumno1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarAlumno2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarAlumno2.Designer.cs">
+      <DependentUpon>ModificarAlumno2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registrarse.cs">
@@ -139,6 +163,18 @@
     <Compile Include="Registrarse.Designer.cs">
       <DependentUpon>Registrarse.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerListaGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerListaGrupos.Designer.cs">
+      <DependentUpon>VerListaGrupos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CapturarCalificaciones1.resx">
+      <DependentUpon>CapturarCalificaciones1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapturarCalificaciones2.resx">
+      <DependentUpon>CapturarCalificaciones2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearGrupo1.resx">
       <DependentUpon>CrearGrupo1.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +193,12 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModificarAlumno1.resx">
+      <DependentUpon>ModificarAlumno1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarAlumno2.resx">
+      <DependentUpon>ModificarAlumno2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -168,6 +210,9 @@
     </Compile>
     <EmbeddedResource Include="Registrarse.resx">
       <DependentUpon>Registrarse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerListaGrupos.resx">
+      <DependentUpon>VerListaGrupos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

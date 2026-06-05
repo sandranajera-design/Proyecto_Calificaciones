@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,19 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Proyecto_Calificaciones
 {
-    public partial class IniciarSesion : Form
+    public partial class Registrarse : Form
     {
-        public IniciarSesion()
+        public Registrarse()
         {
             InitializeComponent();
         }
 
-        /*Conexión con la base de datos
-         */
         class Conexion
         {
             public static MySqlConnection conectar()
@@ -33,36 +31,27 @@ namespace Proyecto_Calificaciones
             }
         }
 
-        /* llama a la conexión de la base de datos y verifica que el usuario y la contraseña existan en la bd, 
-         * si existen muestra el menú
-         */
-        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        private void btnRegistrarse_Click(object sender, EventArgs e)
         {
             try
             {
                 MySqlConnection con = Conexion.conectar();
 
-                string consulta = "SELECT * FROM Usuarios WHERE usuario=@usuario AND contrasena=@contrasena";
+                string insertar = "INSERT INTO Usuarios(usuario, contrasena) VALUES(@usuario, @contrasena)";
 
-                MySqlCommand cmd = new MySqlCommand(consulta, con);
+                MySqlCommand cmd = new MySqlCommand(insertar, con);
 
                 cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
                 cmd.Parameters.AddWithValue("@contrasena", txtContrasena.Text);
 
-                MySqlDataReader lector = cmd.ExecuteReader();
+                cmd.ExecuteNonQuery();
 
-                if (lector.Read())
-                {
+                MessageBox.Show("Usuario registrado correctamente");
 
-                    Menu form = new Menu();
-                    form.Show();
+                IniciarSesion form = new IniciarSesion();
+                form.Show();
 
-                    this.Hide(); 
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o contraseña incorrectos");
-                }
+                this.Hide();
 
                 con.Close();
             }
@@ -70,15 +59,11 @@ namespace Proyecto_Calificaciones
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-
         }
 
-        /*lleva al formulario registrarse
-         */
-
-        private void btnRegistrarse_Click(object sender, EventArgs e)
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            Registrarse form = new Registrarse();
+            IniciarSesion form = new IniciarSesion();
             form.Show();
 
             this.Hide();

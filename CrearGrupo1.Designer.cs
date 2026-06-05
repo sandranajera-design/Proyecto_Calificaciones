@@ -34,16 +34,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEliminarGrupo = new System.Windows.Forms.Button();
+            this.btnVerListaGrupos = new System.Windows.Forms.Button();
+            this.btnCrearNuevoGrupo = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.panelSistema = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCrearNuevoGrupo = new System.Windows.Forms.Button();
-            this.btnVerListaGrupos = new System.Windows.Forms.Button();
-            this.btnEliminarGrupo = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
-            this.panelSistema.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelSistema.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -86,6 +86,7 @@
             this.btnSiguiente.TabIndex = 4;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // panelMenu
             // 
@@ -99,6 +100,61 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(355, 676);
             this.panelMenu.TabIndex = 5;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Location = new System.Drawing.Point(121, 501);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(228, 112);
+            this.btnSalir.TabIndex = 10;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnEliminarGrupo
+            // 
+            this.btnEliminarGrupo.FlatAppearance.BorderSize = 0;
+            this.btnEliminarGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarGrupo.Location = new System.Drawing.Point(121, 383);
+            this.btnEliminarGrupo.Name = "btnEliminarGrupo";
+            this.btnEliminarGrupo.Size = new System.Drawing.Size(228, 112);
+            this.btnEliminarGrupo.TabIndex = 9;
+            this.btnEliminarGrupo.Text = "Eliminar grupo";
+            this.btnEliminarGrupo.UseVisualStyleBackColor = true;
+            // 
+            // btnVerListaGrupos
+            // 
+            this.btnVerListaGrupos.FlatAppearance.BorderSize = 0;
+            this.btnVerListaGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerListaGrupos.Location = new System.Drawing.Point(121, 256);
+            this.btnVerListaGrupos.Name = "btnVerListaGrupos";
+            this.btnVerListaGrupos.Size = new System.Drawing.Size(228, 112);
+            this.btnVerListaGrupos.TabIndex = 8;
+            this.btnVerListaGrupos.Text = "Ver lista de grupos";
+            this.btnVerListaGrupos.UseVisualStyleBackColor = true;
+            // 
+            // btnCrearNuevoGrupo
+            // 
+            this.btnCrearNuevoGrupo.FlatAppearance.BorderSize = 0;
+            this.btnCrearNuevoGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearNuevoGrupo.Location = new System.Drawing.Point(121, 138);
+            this.btnCrearNuevoGrupo.Name = "btnCrearNuevoGrupo";
+            this.btnCrearNuevoGrupo.Size = new System.Drawing.Size(228, 112);
+            this.btnCrearNuevoGrupo.TabIndex = 7;
+            this.btnCrearNuevoGrupo.Text = "Crear Nuevo Grupo";
+            this.btnCrearNuevoGrupo.UseVisualStyleBackColor = true;
+            this.btnCrearNuevoGrupo.Click += new System.EventHandler(this.btnCrearNuevoGrupo_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnMenu);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(355, 100);
+            this.panel1.TabIndex = 5;
             // 
             // btnMenu
             // 
@@ -127,61 +183,6 @@
             this.panelSistema.Size = new System.Drawing.Size(1087, 676);
             this.panelSistema.TabIndex = 7;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnMenu);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(355, 100);
-            this.panel1.TabIndex = 5;
-            // 
-            // btnCrearNuevoGrupo
-            // 
-            this.btnCrearNuevoGrupo.FlatAppearance.BorderSize = 0;
-            this.btnCrearNuevoGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearNuevoGrupo.Location = new System.Drawing.Point(121, 138);
-            this.btnCrearNuevoGrupo.Name = "btnCrearNuevoGrupo";
-            this.btnCrearNuevoGrupo.Size = new System.Drawing.Size(228, 112);
-            this.btnCrearNuevoGrupo.TabIndex = 7;
-            this.btnCrearNuevoGrupo.Text = "Crear Nuevo Grupo";
-            this.btnCrearNuevoGrupo.UseVisualStyleBackColor = true;
-            this.btnCrearNuevoGrupo.Click += new System.EventHandler(this.btnCrearNuevoGrupo_Click);
-            // 
-            // btnVerListaGrupos
-            // 
-            this.btnVerListaGrupos.FlatAppearance.BorderSize = 0;
-            this.btnVerListaGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerListaGrupos.Location = new System.Drawing.Point(121, 256);
-            this.btnVerListaGrupos.Name = "btnVerListaGrupos";
-            this.btnVerListaGrupos.Size = new System.Drawing.Size(228, 112);
-            this.btnVerListaGrupos.TabIndex = 8;
-            this.btnVerListaGrupos.Text = "Ver lista de grupos";
-            this.btnVerListaGrupos.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarGrupo
-            // 
-            this.btnEliminarGrupo.FlatAppearance.BorderSize = 0;
-            this.btnEliminarGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarGrupo.Location = new System.Drawing.Point(121, 383);
-            this.btnEliminarGrupo.Name = "btnEliminarGrupo";
-            this.btnEliminarGrupo.Size = new System.Drawing.Size(228, 112);
-            this.btnEliminarGrupo.TabIndex = 9;
-            this.btnEliminarGrupo.Text = "Eliminar grupo";
-            this.btnEliminarGrupo.UseVisualStyleBackColor = true;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Location = new System.Drawing.Point(121, 501);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(228, 112);
-            this.btnSalir.TabIndex = 10;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // CrearGrupo1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -196,9 +197,9 @@
             this.Text = "CrearGrupo1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panelSistema.ResumeLayout(false);
             this.panelSistema.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

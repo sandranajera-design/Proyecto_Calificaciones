@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Calificaciones
 {
-    partial class CrearGrupo4
+    partial class ModificarAlumno2
     {
         /// <summary>
         /// Required designer variable.
@@ -37,8 +37,8 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.panelSistema = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCapturarCalificaciones = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnGuardarCambios = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSistema.SuspendLayout();
@@ -55,8 +55,8 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(355, 831);
-            this.panelMenu.TabIndex = 7;
+            this.panelMenu.Size = new System.Drawing.Size(355, 653);
+            this.panelMenu.TabIndex = 11;
             // 
             // btnSalir
             // 
@@ -126,53 +126,52 @@
             // 
             // panelSistema
             // 
+            this.panelSistema.Controls.Add(this.btnGuardarCambios);
             this.panelSistema.Controls.Add(this.dataGridView1);
             this.panelSistema.Controls.Add(this.label1);
-            this.panelSistema.Controls.Add(this.btnCapturarCalificaciones);
             this.panelSistema.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSistema.Location = new System.Drawing.Point(355, 0);
             this.panelSistema.Name = "panelSistema";
-            this.panelSistema.Size = new System.Drawing.Size(1204, 831);
-            this.panelSistema.TabIndex = 9;
+            this.panelSistema.Size = new System.Drawing.Size(1086, 653);
+            this.panelSistema.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(474, 148);
+            this.label1.Location = new System.Drawing.Point(449, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 25);
+            this.label1.Size = new System.Drawing.Size(176, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Calificaciones";
-            // 
-            // btnCapturarCalificaciones
-            // 
-            this.btnCapturarCalificaciones.Location = new System.Drawing.Point(408, 589);
-            this.btnCapturarCalificaciones.Name = "btnCapturarCalificaciones";
-            this.btnCapturarCalificaciones.Size = new System.Drawing.Size(349, 85);
-            this.btnCapturarCalificaciones.TabIndex = 4;
-            this.btnCapturarCalificaciones.Text = "Capturar calificaciones";
-            this.btnCapturarCalificaciones.UseVisualStyleBackColor = true;
+            this.label1.Text = "Modificar alumno";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(112, 217);
+            this.dataGridView1.Location = new System.Drawing.Point(201, 159);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(908, 288);
-            this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.Size = new System.Drawing.Size(724, 150);
+            this.dataGridView1.TabIndex = 1;
             // 
-            // CrearGrupo4
+            // btnGuardarCambios
+            // 
+            this.btnGuardarCambios.Location = new System.Drawing.Point(409, 471);
+            this.btnGuardarCambios.Name = "btnGuardarCambios";
+            this.btnGuardarCambios.Size = new System.Drawing.Size(241, 107);
+            this.btnGuardarCambios.TabIndex = 2;
+            this.btnGuardarCambios.Text = "Guardar Cambios";
+            this.btnGuardarCambios.UseVisualStyleBackColor = true;
+            // 
+            // ModificarAlumno2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1559, 831);
+            this.ClientSize = new System.Drawing.Size(1441, 653);
             this.Controls.Add(this.panelSistema);
             this.Controls.Add(this.panelMenu);
-            this.Name = "CrearGrupo4";
-            this.Text = "CrearGrupo4";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "ModificarAlumno2";
+            this.Text = "ModificarAlumno2";
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelSistema.ResumeLayout(false);
@@ -192,8 +191,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Panel panelSistema;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCapturarCalificaciones;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnGuardarCambios;
     }
 }

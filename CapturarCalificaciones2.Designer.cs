@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Calificaciones
 {
-    partial class CrearGrupo4
+    partial class CapturarCalificaciones2
     {
         /// <summary>
         /// Required designer variable.
@@ -36,9 +36,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.panelSistema = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCapturarCalificaciones = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnCalcularPromedio = new System.Windows.Forms.Button();
+            this.btnGuardarCambios = new System.Windows.Forms.Button();
+            this.btnExportar = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSistema.SuspendLayout();
@@ -55,8 +58,8 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(355, 831);
-            this.panelMenu.TabIndex = 7;
+            this.panelMenu.Size = new System.Drawing.Size(355, 753);
+            this.panelMenu.TabIndex = 9;
             // 
             // btnSalir
             // 
@@ -126,53 +129,82 @@
             // 
             // panelSistema
             // 
+            this.panelSistema.Controls.Add(this.btnExportar);
+            this.panelSistema.Controls.Add(this.btnGuardarCambios);
+            this.panelSistema.Controls.Add(this.btnCalcularPromedio);
             this.panelSistema.Controls.Add(this.dataGridView1);
+            this.panelSistema.Controls.Add(this.label2);
             this.panelSistema.Controls.Add(this.label1);
-            this.panelSistema.Controls.Add(this.btnCapturarCalificaciones);
             this.panelSistema.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSistema.Location = new System.Drawing.Point(355, 0);
             this.panelSistema.Name = "panelSistema";
-            this.panelSistema.Size = new System.Drawing.Size(1204, 831);
-            this.panelSistema.TabIndex = 9;
+            this.panelSistema.Size = new System.Drawing.Size(1214, 753);
+            this.panelSistema.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(185, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(714, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "** muestra la tabla dependiendo el grupo  y exporta los cambios a excel**";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(474, 148);
+            this.label1.Location = new System.Drawing.Point(415, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 25);
+            this.label1.Size = new System.Drawing.Size(231, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Calificaciones";
-            // 
-            // btnCapturarCalificaciones
-            // 
-            this.btnCapturarCalificaciones.Location = new System.Drawing.Point(408, 589);
-            this.btnCapturarCalificaciones.Name = "btnCapturarCalificaciones";
-            this.btnCapturarCalificaciones.Size = new System.Drawing.Size(349, 85);
-            this.btnCapturarCalificaciones.TabIndex = 4;
-            this.btnCapturarCalificaciones.Text = "Capturar calificaciones";
-            this.btnCapturarCalificaciones.UseVisualStyleBackColor = true;
+            this.label1.Text = "Capturar calificaciones";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(112, 217);
+            this.dataGridView1.Location = new System.Drawing.Point(111, 218);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(908, 288);
-            this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.Size = new System.Drawing.Size(852, 150);
+            this.dataGridView1.TabIndex = 2;
             // 
-            // CrearGrupo4
+            // btnCalcularPromedio
+            // 
+            this.btnCalcularPromedio.Location = new System.Drawing.Point(190, 488);
+            this.btnCalcularPromedio.Name = "btnCalcularPromedio";
+            this.btnCalcularPromedio.Size = new System.Drawing.Size(228, 87);
+            this.btnCalcularPromedio.TabIndex = 3;
+            this.btnCalcularPromedio.Text = "Calcular promedio";
+            this.btnCalcularPromedio.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardarCambios
+            // 
+            this.btnGuardarCambios.Location = new System.Drawing.Point(687, 488);
+            this.btnGuardarCambios.Name = "btnGuardarCambios";
+            this.btnGuardarCambios.Size = new System.Drawing.Size(228, 87);
+            this.btnGuardarCambios.TabIndex = 4;
+            this.btnGuardarCambios.Text = "Guardar cambios";
+            this.btnGuardarCambios.UseVisualStyleBackColor = true;
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.Location = new System.Drawing.Point(391, 636);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(302, 87);
+            this.btnExportar.TabIndex = 5;
+            this.btnExportar.Text = "Exportar tabla a excel";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            // 
+            // CapturarCalificaciones2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1559, 831);
+            this.ClientSize = new System.Drawing.Size(1569, 753);
             this.Controls.Add(this.panelSistema);
             this.Controls.Add(this.panelMenu);
-            this.Name = "CrearGrupo4";
-            this.Text = "CrearGrupo4";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "CapturarCalificaciones2";
+            this.Text = "CapturarCalificaciones2";
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelSistema.ResumeLayout(false);
@@ -193,7 +225,10 @@
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Panel panelSistema;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCapturarCalificaciones;
+        private System.Windows.Forms.Button btnGuardarCambios;
+        private System.Windows.Forms.Button btnCalcularPromedio;
+        private System.Windows.Forms.Button btnExportar;
     }
 }

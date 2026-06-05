@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace Proyecto_Calificaciones
 {
-    public partial class CrearGrupo3 : Form
+    public partial class ModificarAlumno1 : Form
     {
-        public CrearGrupo3()
+        public ModificarAlumno1()
         {
             InitializeComponent();
-        }
-
-        private void btnGenerarTabla_Click(object sender, EventArgs e)
-        {
-            CrearGrupo4 form = new CrearGrupo4();
-            form.Show();
-
-            this.Hide();
-
         }
     }
 }

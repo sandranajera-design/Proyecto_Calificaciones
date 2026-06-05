@@ -49,5 +49,14 @@ namespace Proyecto_Calificaciones
                 Application.Exit();
             }
         }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            CrearGrupo2 form = new CrearGrupo2();
+            form.Show();
+
+            this.Hide();
+
+        }
     }
 }

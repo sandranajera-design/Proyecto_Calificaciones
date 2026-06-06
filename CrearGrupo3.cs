@@ -25,5 +25,39 @@ namespace Proyecto_Calificaciones
             this.Hide();
 
         }
+
+        private void btnCrearNuevoGrupo_Click(object sender, EventArgs e)
+        {
+            CrearGrupo1 form = new CrearGrupo1();
+            form.Show();
+
+            this.Hide();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Desea salir del programa?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnVerListaGrupos_Click(object sender, EventArgs e)
+        {
+            VerListaGrupos form = new VerListaGrupos();
+            form.Show();
+
+            this.Hide();
+        }
+
+        private void btnEliminarGrupo_Click(object sender, EventArgs e)
+        {
+            EliminarGrupo1 form = new EliminarGrupo1();
+            form.Show();
+
+            this.Hide();
+        }
     }
 }

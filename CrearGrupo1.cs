@@ -58,5 +58,21 @@ namespace Proyecto_Calificaciones
             this.Hide();
 
         }
+
+        private void btnVerListaGrupos_Click(object sender, EventArgs e)
+        {
+            VerListaGrupos form = new VerListaGrupos();
+            form.Show();
+
+            this.Hide();
+        }
+
+        private void btnEliminarGrupo_Click(object sender, EventArgs e)
+        {
+            EliminarGrupo1 form = new EliminarGrupo1();
+            form.Show();
+
+            this.Hide();
+        }
     }
 }

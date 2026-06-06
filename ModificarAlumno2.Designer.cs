@@ -36,9 +36,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.panelSistema = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnGuardarCambios = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSistema.SuspendLayout();
@@ -68,6 +68,7 @@
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminarGrupo
             // 
@@ -79,6 +80,7 @@
             this.btnEliminarGrupo.TabIndex = 9;
             this.btnEliminarGrupo.Text = "Eliminar grupo";
             this.btnEliminarGrupo.UseVisualStyleBackColor = true;
+            this.btnEliminarGrupo.Click += new System.EventHandler(this.btnEliminarGrupo_Click);
             // 
             // btnVerListaGrupos
             // 
@@ -90,6 +92,7 @@
             this.btnVerListaGrupos.TabIndex = 8;
             this.btnVerListaGrupos.Text = "Ver lista de grupos";
             this.btnVerListaGrupos.UseVisualStyleBackColor = true;
+            this.btnVerListaGrupos.Click += new System.EventHandler(this.btnVerListaGrupos_Click);
             // 
             // btnCrearNuevoGrupo
             // 
@@ -101,6 +104,7 @@
             this.btnCrearNuevoGrupo.TabIndex = 7;
             this.btnCrearNuevoGrupo.Text = "Crear Nuevo Grupo";
             this.btnCrearNuevoGrupo.UseVisualStyleBackColor = true;
+            this.btnCrearNuevoGrupo.Click += new System.EventHandler(this.btnCrearNuevoGrupo_Click);
             // 
             // panel1
             // 
@@ -135,14 +139,14 @@
             this.panelSistema.Size = new System.Drawing.Size(1086, 653);
             this.panelSistema.TabIndex = 12;
             // 
-            // label1
+            // btnGuardarCambios
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(449, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Modificar alumno";
+            this.btnGuardarCambios.Location = new System.Drawing.Point(409, 471);
+            this.btnGuardarCambios.Name = "btnGuardarCambios";
+            this.btnGuardarCambios.Size = new System.Drawing.Size(241, 107);
+            this.btnGuardarCambios.TabIndex = 2;
+            this.btnGuardarCambios.Text = "Guardar Cambios";
+            this.btnGuardarCambios.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -154,14 +158,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(724, 150);
             this.dataGridView1.TabIndex = 1;
             // 
-            // btnGuardarCambios
+            // label1
             // 
-            this.btnGuardarCambios.Location = new System.Drawing.Point(409, 471);
-            this.btnGuardarCambios.Name = "btnGuardarCambios";
-            this.btnGuardarCambios.Size = new System.Drawing.Size(241, 107);
-            this.btnGuardarCambios.TabIndex = 2;
-            this.btnGuardarCambios.Text = "Guardar Cambios";
-            this.btnGuardarCambios.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(449, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Modificar alumno";
             // 
             // ModificarAlumno2
             // 
@@ -172,6 +176,7 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "ModificarAlumno2";
             this.Text = "ModificarAlumno2";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelSistema.ResumeLayout(false);

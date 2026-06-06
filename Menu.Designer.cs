@@ -62,6 +62,7 @@
             this.btnVerListaGrupos.TabIndex = 2;
             this.btnVerListaGrupos.Text = "Ver lista de grupos";
             this.btnVerListaGrupos.UseVisualStyleBackColor = true;
+            this.btnVerListaGrupos.Click += new System.EventHandler(this.btnVerListaGrupos_Click);
             // 
             // btnEliminarGrupo
             // 
@@ -71,6 +72,7 @@
             this.btnEliminarGrupo.TabIndex = 3;
             this.btnEliminarGrupo.Text = "Eliminar grupo";
             this.btnEliminarGrupo.UseVisualStyleBackColor = true;
+            this.btnEliminarGrupo.Click += new System.EventHandler(this.btnEliminarGrupo_Click);
             // 
             // btnSalir
             // 

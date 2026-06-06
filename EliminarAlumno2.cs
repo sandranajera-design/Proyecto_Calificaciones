@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Calificaciones
 {
-    public partial class VerListaGrupos : Form
+    public partial class EliminarAlumno2 : Form
     {
-        public VerListaGrupos()
+        public EliminarAlumno2()
         {
             InitializeComponent();
         }
@@ -46,30 +46,6 @@ namespace Proyecto_Calificaciones
         private void btnEliminarGrupo_Click(object sender, EventArgs e)
         {
             EliminarGrupo1 form = new EliminarGrupo1();
-            form.Show();
-
-            this.Hide();
-        }
-
-        private void btnEliminarAlumno_Click(object sender, EventArgs e)
-        {
-            EliminarAlumno1 form = new EliminarAlumno1();
-            form.Show();
-
-            this.Hide();
-        }
-
-        private void btnModificarAlumno_Click(object sender, EventArgs e)
-        {
-            ModificarAlumno1 form = new ModificarAlumno1();
-            form.Show();
-
-            this.Hide();
-        }
-
-        private void btnCapturarCalificaciones_Click(object sender, EventArgs e)
-        {
-            CapturarCalificaciones1 form = new CapturarCalificaciones1();
             form.Show();
 
             this.Hide();

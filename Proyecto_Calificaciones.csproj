@@ -131,6 +131,24 @@
     <Compile Include="CrearGrupo4.Designer.cs">
       <DependentUpon>CrearGrupo4.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarAlumno1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarAlumno1.Designer.cs">
+      <DependentUpon>EliminarAlumno1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarAlumno2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarAlumno2.Designer.cs">
+      <DependentUpon>EliminarAlumno2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarGrupo1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarGrupo1.Designer.cs">
+      <DependentUpon>EliminarGrupo1.cs</DependentUpon>
+    </Compile>
     <Compile Include="IniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +204,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrearGrupo4.resx">
       <DependentUpon>CrearGrupo4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarAlumno1.resx">
+      <DependentUpon>EliminarAlumno1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarAlumno2.resx">
+      <DependentUpon>EliminarAlumno2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarGrupo1.resx">
+      <DependentUpon>EliminarGrupo1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IniciarSesion.resx">
       <DependentUpon>IniciarSesion.cs</DependentUpon>

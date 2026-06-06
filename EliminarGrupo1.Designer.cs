@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Calificaciones
 {
-    partial class CrearGrupo4
+    partial class EliminarGrupo1
     {
         /// <summary>
         /// Required designer variable.
@@ -35,14 +35,11 @@
             this.btnCrearNuevoGrupo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.panelSistema = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCapturarCalificaciones = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelSistema.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -55,8 +52,8 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(355, 831);
-            this.panelMenu.TabIndex = 7;
+            this.panelMenu.Size = new System.Drawing.Size(355, 676);
+            this.panelMenu.TabIndex = 10;
             // 
             // btnSalir
             // 
@@ -128,61 +125,49 @@
             this.btnMenu.Text = "☰";
             this.btnMenu.UseVisualStyleBackColor = false;
             // 
-            // panelSistema
-            // 
-            this.panelSistema.Controls.Add(this.dataGridView1);
-            this.panelSistema.Controls.Add(this.label1);
-            this.panelSistema.Controls.Add(this.btnCapturarCalificaciones);
-            this.panelSistema.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSistema.Location = new System.Drawing.Point(355, 0);
-            this.panelSistema.Name = "panelSistema";
-            this.panelSistema.Size = new System.Drawing.Size(1204, 831);
-            this.panelSistema.TabIndex = 9;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(112, 217);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(908, 288);
-            this.dataGridView1.TabIndex = 5;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(474, 148);
+            this.label1.Location = new System.Drawing.Point(726, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Calificaciones";
+            this.label1.Size = new System.Drawing.Size(301, 25);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Seleccione el grupo a eliminar";
             // 
-            // btnCapturarCalificaciones
+            // label2
             // 
-            this.btnCapturarCalificaciones.Location = new System.Drawing.Point(408, 589);
-            this.btnCapturarCalificaciones.Name = "btnCapturarCalificaciones";
-            this.btnCapturarCalificaciones.Size = new System.Drawing.Size(349, 85);
-            this.btnCapturarCalificaciones.TabIndex = 4;
-            this.btnCapturarCalificaciones.Text = "Capturar calificaciones";
-            this.btnCapturarCalificaciones.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(562, 192);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(667, 25);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "** muestra en botones los grupos disponibles de manera dinamica **";
             // 
-            // CrearGrupo4
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(562, 256);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(648, 25);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "** al seleccionar el grupo muestra message box de confirmacion **";
+            // 
+            // EliminarGrupo1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1559, 831);
-            this.Controls.Add(this.panelSistema);
+            this.ClientSize = new System.Drawing.Size(1543, 676);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelMenu);
-            this.Name = "CrearGrupo4";
-            this.Text = "CrearGrupo4";
+            this.Name = "EliminarGrupo1";
+            this.Text = "EliminarGrupo1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panelSistema.ResumeLayout(false);
-            this.panelSistema.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -195,9 +180,8 @@
         private System.Windows.Forms.Button btnCrearNuevoGrupo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.Panel panelSistema;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCapturarCalificaciones;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

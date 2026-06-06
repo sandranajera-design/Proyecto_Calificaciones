@@ -36,8 +36,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.panelSistema = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSistema.SuspendLayout();
@@ -66,6 +66,7 @@
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminarGrupo
             // 
@@ -77,6 +78,7 @@
             this.btnEliminarGrupo.TabIndex = 9;
             this.btnEliminarGrupo.Text = "Eliminar grupo";
             this.btnEliminarGrupo.UseVisualStyleBackColor = true;
+            this.btnEliminarGrupo.Click += new System.EventHandler(this.btnEliminarGrupo_Click);
             // 
             // btnVerListaGrupos
             // 
@@ -88,6 +90,7 @@
             this.btnVerListaGrupos.TabIndex = 8;
             this.btnVerListaGrupos.Text = "Ver lista de grupos";
             this.btnVerListaGrupos.UseVisualStyleBackColor = true;
+            this.btnVerListaGrupos.Click += new System.EventHandler(this.btnVerListaGrupos_Click);
             // 
             // btnCrearNuevoGrupo
             // 
@@ -99,6 +102,7 @@
             this.btnCrearNuevoGrupo.TabIndex = 7;
             this.btnCrearNuevoGrupo.Text = "Crear Nuevo Grupo";
             this.btnCrearNuevoGrupo.UseVisualStyleBackColor = true;
+            this.btnCrearNuevoGrupo.Click += new System.EventHandler(this.btnCrearNuevoGrupo_Click);
             // 
             // panel1
             // 
@@ -132,15 +136,6 @@
             this.panelSistema.Size = new System.Drawing.Size(1260, 650);
             this.panelSistema.TabIndex = 10;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(271, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(499, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Seleccione el grupo al cual agregará calificaciones";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -149,6 +144,15 @@
             this.label2.Size = new System.Drawing.Size(683, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "** depende de la cantidad de grupos se agregan botones dinamicos **";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(271, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(499, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Seleccione el grupo al cual agregará calificaciones";
             // 
             // CapturarCalificaciones1
             // 
@@ -159,6 +163,7 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "CapturarCalificaciones1";
             this.Text = "CapturarCalificaciones1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelSistema.ResumeLayout(false);

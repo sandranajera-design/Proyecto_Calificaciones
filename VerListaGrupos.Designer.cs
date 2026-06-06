@@ -36,10 +36,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.panelSistema = new System.Windows.Forms.Panel();
+            this.btnCapturarCalificaciones = new System.Windows.Forms.Button();
+            this.btnModificarAlumno = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEliminarAlumno = new System.Windows.Forms.Button();
-            this.btnModificarAlumno = new System.Windows.Forms.Button();
-            this.btnCapturarCalificaciones = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSistema.SuspendLayout();
@@ -68,6 +68,7 @@
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminarGrupo
             // 
@@ -79,6 +80,7 @@
             this.btnEliminarGrupo.TabIndex = 9;
             this.btnEliminarGrupo.Text = "Eliminar grupo";
             this.btnEliminarGrupo.UseVisualStyleBackColor = true;
+            this.btnEliminarGrupo.Click += new System.EventHandler(this.btnEliminarGrupo_Click);
             // 
             // btnVerListaGrupos
             // 
@@ -90,6 +92,7 @@
             this.btnVerListaGrupos.TabIndex = 8;
             this.btnVerListaGrupos.Text = "Ver lista de grupos";
             this.btnVerListaGrupos.UseVisualStyleBackColor = true;
+            this.btnVerListaGrupos.Click += new System.EventHandler(this.btnVerListaGrupos_Click);
             // 
             // btnCrearNuevoGrupo
             // 
@@ -101,6 +104,7 @@
             this.btnCrearNuevoGrupo.TabIndex = 7;
             this.btnCrearNuevoGrupo.Text = "Crear Nuevo Grupo";
             this.btnCrearNuevoGrupo.UseVisualStyleBackColor = true;
+            this.btnCrearNuevoGrupo.Click += new System.EventHandler(this.btnCrearNuevoGrupo_Click);
             // 
             // panel1
             // 
@@ -136,6 +140,26 @@
             this.panelSistema.Size = new System.Drawing.Size(1248, 699);
             this.panelSistema.TabIndex = 9;
             // 
+            // btnCapturarCalificaciones
+            // 
+            this.btnCapturarCalificaciones.Location = new System.Drawing.Point(405, 438);
+            this.btnCapturarCalificaciones.Name = "btnCapturarCalificaciones";
+            this.btnCapturarCalificaciones.Size = new System.Drawing.Size(282, 85);
+            this.btnCapturarCalificaciones.TabIndex = 6;
+            this.btnCapturarCalificaciones.Text = "Capturar calificaciones";
+            this.btnCapturarCalificaciones.UseVisualStyleBackColor = true;
+            this.btnCapturarCalificaciones.Click += new System.EventHandler(this.btnCapturarCalificaciones_Click);
+            // 
+            // btnModificarAlumno
+            // 
+            this.btnModificarAlumno.Location = new System.Drawing.Point(433, 305);
+            this.btnModificarAlumno.Name = "btnModificarAlumno";
+            this.btnModificarAlumno.Size = new System.Drawing.Size(231, 85);
+            this.btnModificarAlumno.TabIndex = 5;
+            this.btnModificarAlumno.Text = "Modificar alumno";
+            this.btnModificarAlumno.UseVisualStyleBackColor = true;
+            this.btnModificarAlumno.Click += new System.EventHandler(this.btnModificarAlumno_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -153,24 +177,7 @@
             this.btnEliminarAlumno.TabIndex = 4;
             this.btnEliminarAlumno.Text = "Eliminar alumno";
             this.btnEliminarAlumno.UseVisualStyleBackColor = true;
-            // 
-            // btnModificarAlumno
-            // 
-            this.btnModificarAlumno.Location = new System.Drawing.Point(433, 305);
-            this.btnModificarAlumno.Name = "btnModificarAlumno";
-            this.btnModificarAlumno.Size = new System.Drawing.Size(231, 85);
-            this.btnModificarAlumno.TabIndex = 5;
-            this.btnModificarAlumno.Text = "Modificar alumno";
-            this.btnModificarAlumno.UseVisualStyleBackColor = true;
-            // 
-            // btnCapturarCalificaciones
-            // 
-            this.btnCapturarCalificaciones.Location = new System.Drawing.Point(405, 438);
-            this.btnCapturarCalificaciones.Name = "btnCapturarCalificaciones";
-            this.btnCapturarCalificaciones.Size = new System.Drawing.Size(282, 85);
-            this.btnCapturarCalificaciones.TabIndex = 6;
-            this.btnCapturarCalificaciones.Text = "Capturar calificaciones";
-            this.btnCapturarCalificaciones.UseVisualStyleBackColor = true;
+            this.btnEliminarAlumno.Click += new System.EventHandler(this.btnEliminarAlumno_Click);
             // 
             // VerListaGrupos
             // 
@@ -181,6 +188,7 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "VerListaGrupos";
             this.Text = "VerListaGrupos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelSistema.ResumeLayout(false);

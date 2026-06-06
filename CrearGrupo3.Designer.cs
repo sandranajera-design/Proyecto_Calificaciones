@@ -36,11 +36,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.panelSistema = new System.Windows.Forms.Panel();
+            this.btnGenerarTabla = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnImportarAlumnos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMostrarAlumnos = new System.Windows.Forms.Button();
-            this.btnImportarAlumnos = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnGenerarTabla = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSistema.SuspendLayout();
@@ -70,6 +70,7 @@
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminarGrupo
             // 
@@ -81,6 +82,7 @@
             this.btnEliminarGrupo.TabIndex = 9;
             this.btnEliminarGrupo.Text = "Eliminar grupo";
             this.btnEliminarGrupo.UseVisualStyleBackColor = true;
+            this.btnEliminarGrupo.Click += new System.EventHandler(this.btnEliminarGrupo_Click);
             // 
             // btnVerListaGrupos
             // 
@@ -92,6 +94,7 @@
             this.btnVerListaGrupos.TabIndex = 8;
             this.btnVerListaGrupos.Text = "Ver lista de grupos";
             this.btnVerListaGrupos.UseVisualStyleBackColor = true;
+            this.btnVerListaGrupos.Click += new System.EventHandler(this.btnVerListaGrupos_Click);
             // 
             // btnCrearNuevoGrupo
             // 
@@ -103,6 +106,7 @@
             this.btnCrearNuevoGrupo.TabIndex = 7;
             this.btnCrearNuevoGrupo.Text = "Crear Nuevo Grupo";
             this.btnCrearNuevoGrupo.UseVisualStyleBackColor = true;
+            this.btnCrearNuevoGrupo.Click += new System.EventHandler(this.btnCrearNuevoGrupo_Click);
             // 
             // panel1
             // 
@@ -139,6 +143,39 @@
             this.panelSistema.Size = new System.Drawing.Size(1211, 735);
             this.panelSistema.TabIndex = 9;
             // 
+            // btnGenerarTabla
+            // 
+            this.btnGenerarTabla.Location = new System.Drawing.Point(303, 574);
+            this.btnGenerarTabla.Name = "btnGenerarTabla";
+            this.btnGenerarTabla.Size = new System.Drawing.Size(429, 85);
+            this.btnGenerarTabla.TabIndex = 9;
+            this.btnGenerarTabla.Text = "Generar tabla de calificaciones";
+            this.btnGenerarTabla.UseVisualStyleBackColor = true;
+            this.btnGenerarTabla.Click += new System.EventHandler(this.btnGenerarTabla_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(146, 345);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.RowTemplate.Height = 33;
+            this.dataGridView1.Size = new System.Drawing.Size(792, 150);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // btnImportarAlumnos
+            // 
+            this.btnImportarAlumnos.BackColor = System.Drawing.Color.Transparent;
+            this.btnImportarAlumnos.FlatAppearance.BorderSize = 0;
+            this.btnImportarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportarAlumnos.Location = new System.Drawing.Point(676, 71);
+            this.btnImportarAlumnos.Name = "btnImportarAlumnos";
+            this.btnImportarAlumnos.Size = new System.Drawing.Size(56, 76);
+            this.btnImportarAlumnos.TabIndex = 7;
+            this.btnImportarAlumnos.Text = "📥";
+            this.btnImportarAlumnos.UseVisualStyleBackColor = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -156,39 +193,6 @@
             this.btnMostrarAlumnos.TabIndex = 4;
             this.btnMostrarAlumnos.Text = "Mostrar alumnos";
             this.btnMostrarAlumnos.UseVisualStyleBackColor = true;
-            // 
-            // btnImportarAlumnos
-            // 
-            this.btnImportarAlumnos.BackColor = System.Drawing.Color.Transparent;
-            this.btnImportarAlumnos.FlatAppearance.BorderSize = 0;
-            this.btnImportarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImportarAlumnos.Location = new System.Drawing.Point(676, 71);
-            this.btnImportarAlumnos.Name = "btnImportarAlumnos";
-            this.btnImportarAlumnos.Size = new System.Drawing.Size(56, 76);
-            this.btnImportarAlumnos.TabIndex = 7;
-            this.btnImportarAlumnos.Text = "📥";
-            this.btnImportarAlumnos.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(146, 345);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(792, 150);
-            this.dataGridView1.TabIndex = 8;
-            // 
-            // btnGenerarTabla
-            // 
-            this.btnGenerarTabla.Location = new System.Drawing.Point(303, 574);
-            this.btnGenerarTabla.Name = "btnGenerarTabla";
-            this.btnGenerarTabla.Size = new System.Drawing.Size(429, 85);
-            this.btnGenerarTabla.TabIndex = 9;
-            this.btnGenerarTabla.Text = "Generar tabla de calificaciones";
-            this.btnGenerarTabla.UseVisualStyleBackColor = true;
-            this.btnGenerarTabla.Click += new System.EventHandler(this.btnGenerarTabla_Click);
             // 
             // CrearGrupo3
             // 

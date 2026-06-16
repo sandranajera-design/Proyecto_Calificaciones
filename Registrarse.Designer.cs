@@ -39,35 +39,35 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(804, 254);
+            this.txtContrasena.Location = new System.Drawing.Point(402, 132);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(213, 31);
+            this.txtContrasena.Size = new System.Drawing.Size(108, 20);
             this.txtContrasena.TabIndex = 12;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(804, 175);
+            this.txtUsuario.Location = new System.Drawing.Point(402, 91);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(213, 31);
+            this.txtUsuario.Size = new System.Drawing.Size(108, 20);
             this.txtUsuario.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(539, 273);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(270, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 25);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Contraseña";
             // 
             // btnRegistrarse
             // 
             this.btnRegistrarse.AutoSize = true;
-            this.btnRegistrarse.Location = new System.Drawing.Point(652, 356);
-            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(6);
+            this.btnRegistrarse.Location = new System.Drawing.Point(326, 185);
             this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(283, 57);
+            this.btnRegistrarse.Size = new System.Drawing.Size(142, 30);
             this.btnRegistrarse.TabIndex = 9;
             this.btnRegistrarse.Text = "Crear cuenta";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
@@ -76,30 +76,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(539, 199);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(270, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 25);
+            this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Usuario";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(777, 46);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(388, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 25);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Registrarse";
             // 
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.AutoSize = true;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(652, 541);
-            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(6);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(326, 281);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(283, 57);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(142, 30);
             this.btnIniciarSesion.TabIndex = 13;
             this.btnIniciarSesion.Text = "Volver a iniciar sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
@@ -107,9 +104,9 @@
             // 
             // Registrarse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1630, 835);
+            this.ClientSize = new System.Drawing.Size(685, 389);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.txtUsuario);
@@ -117,9 +114,11 @@
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Registrarse";
             this.Text = "Registrarse";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Registrarse_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

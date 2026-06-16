@@ -83,5 +83,10 @@ namespace Proyecto_Calificaciones
 
             this.Hide();
         }
+
+        private void IniciarSesion_Load(object sender, EventArgs e)
+        {
+            txtContrasena.UseSystemPasswordChar = true;
+        }
     }
 }

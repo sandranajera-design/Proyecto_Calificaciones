@@ -43,6 +43,7 @@
             this.btnMostrarAlumnos = new System.Windows.Forms.Button();
             this.agregarColumna = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.exportar = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSistema.SuspendLayout();
@@ -141,6 +142,7 @@
             // 
             // panelSistema
             // 
+            this.panelSistema.Controls.Add(this.exportar);
             this.panelSistema.Controls.Add(this.button1);
             this.panelSistema.Controls.Add(this.agregarColumna);
             this.panelSistema.Controls.Add(this.btnGenerarTabla);
@@ -234,6 +236,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // exportar
+            // 
+            this.exportar.Location = new System.Drawing.Point(618, 372);
+            this.exportar.Margin = new System.Windows.Forms.Padding(2);
+            this.exportar.Name = "exportar";
+            this.exportar.Size = new System.Drawing.Size(135, 49);
+            this.exportar.TabIndex = 12;
+            this.exportar.Text = "Guardar cambios en EXCEL";
+            this.exportar.UseVisualStyleBackColor = true;
+            this.exportar.Click += new System.EventHandler(this.exportar_Click);
+            // 
             // CrearGrupo3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -271,5 +284,6 @@
         private System.Windows.Forms.Button btnMostrarAlumnos;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button agregarColumna;
+        private System.Windows.Forms.Button exportar;
     }
 }

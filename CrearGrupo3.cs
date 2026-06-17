@@ -159,5 +159,58 @@ namespace Proyecto_Calificaciones
                 }
             }
         }
+
+        private void exportar_Click(object sender, EventArgs e)
+        {
+            ExportarExcel(dataGridView1); //llama la función de exportar
+        }
+
+        //función de exportar
+        private void ExportarExcel(DataGridView dataGridView)
+        {
+            if (string.IsNullOrEmpty(rutaArchivo)) //si no se seleccionó un archivo muestra un mensaje
+            {
+                MessageBox.Show("No hay archivo importado para exportar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Excel.Application excelApp = new Excel.Application();
+            excelApp.Visible = true;
+
+            try
+            {
+                Excel.Workbook workbook = excelApp.Workbooks.Open(rutaArchivo); //abre el archivo
+                Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Sheets[1]; //obtiene la primera hoja
+
+                //obtiene el numero dde columnas 
+                int columCount = dataGridView.ColumnCount;
+                for (int i = 0; i < columCount; i++)
+                {
+                    worksheet.Cells[1, i + 1] = dataGridView.Columns[i].HeaderText; //escribe el encabezados
+                }
+
+                //obtiene las filas
+                int rowCount = dataGridView.RowCount;
+                for (int i = 0; i < rowCount; i++)
+                {
+                    for (int j = 0; j < columCount; j++)
+                    {
+                        worksheet.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value?.ToString();//escribe lo datos de las celdas
+                    }
+                }
+
+                workbook.Save(); //guarda los cambios
+                MessageBox.Show("Cambios guardados en: " + rutaArchivo);
+            }
+            catch (System.Runtime.InteropServices.COMException ex) //por si esta abierto el archivo
+            {
+                MessageBox.Show("El archivo está abierto en Excel. Ciérrelo antes de exportar.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally //al finalizar cierra EXCEL
+            {
+                excelApp.Quit();
+            }
+        }
     }
 }

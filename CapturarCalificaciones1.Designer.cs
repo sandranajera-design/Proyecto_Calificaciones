@@ -38,7 +38,6 @@
             this.panelSistema = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSistema.SuspendLayout();
@@ -136,7 +135,6 @@
             // 
             // panelSistema
             // 
-            this.panelSistema.Controls.Add(this.label3);
             this.panelSistema.Controls.Add(this.label2);
             this.panelSistema.Controls.Add(this.label1);
             this.panelSistema.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -165,16 +163,6 @@
             this.label1.Size = new System.Drawing.Size(247, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Seleccione el grupo al cual agregará calificaciones";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 163);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(338, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "** depende de la cantidad de grupos se agregan botones dinamicos **";
             // 
             // CapturarCalificaciones1
             // 
@@ -207,6 +195,5 @@
         private System.Windows.Forms.Panel panelSistema;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
     }
 }

@@ -10,24 +10,64 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using ExcelDataReader;
+using ClosedXML.Excel;
+using System.IO;
 
 
 namespace Proyecto_Calificaciones
 {
     public partial class CrearGrupo3 : Form
     {
+        private string nombreGrupo;
+        private List<ApartadoEvaluacion> apartados;
+        private List<AlumnoExcel> alumnos = new List<AlumnoExcel>();
+
         public CrearGrupo3()
         {
             InitializeComponent();
         }
+        public CrearGrupo3(string nombreGrupo, List<ApartadoEvaluacion> apartados)
+        {
+            InitializeComponent();
+
+            this.nombreGrupo = nombreGrupo;
+            this.apartados = apartados;
+        }
 
         private void btnGenerarTabla_Click(object sender, EventArgs e)
         {
-            CrearGrupo4 form = new CrearGrupo4();
-            form.Show();
+            if (alumnos.Count == 0)
+            {
+                DialogResult respuesta = MessageBox.Show(
+                    "No se han importado alumnos. ¿Desea generar la tabla sin alumnos?",
+                    "Sin alumnos",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
 
-            this.Hide();
+                if (respuesta == DialogResult.No)
+                {
+                    return;
+                }
+            }
 
+            try
+            {
+                string rutaArchivo = AdministradorExcel.CrearArchivoGrupo(nombreGrupo, apartados, alumnos);
+
+                MessageBox.Show("Archivo Excel creado correctamente:\n" + rutaArchivo, "Excel generado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                
+
+                CapturarCalificaciones2 form = new CapturarCalificaciones2(rutaArchivo);
+                form.Show();
+
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al generar el archivo Excel: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCrearNuevoGrupo_Click(object sender, EventArgs e)
@@ -50,7 +90,7 @@ namespace Proyecto_Calificaciones
 
         private void btnVerListaGrupos_Click(object sender, EventArgs e)
         {
-            VerListaGrupos form = new VerListaGrupos();
+            VerListaGrupos2 form = new VerListaGrupos2();
             form.Show();
 
             this.Hide();
@@ -67,150 +107,72 @@ namespace Proyecto_Calificaciones
         private string rutaArchivo; //guarda la ruta para despues exportar los cambios a ella
 
         // importar archivo
-        private void btnImportarAlumnos_Click(object sender, EventArgs e) 
+        private void btnImportarAlumnos_Click(object sender, EventArgs e)
         {
-            //abrir una ventana para seleccionar el archivo .xls y .xlsx
-            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "archivos de Excel|*.xlsx|Archivos de Excel97-2003|*.xls" })
+            OpenFileDialog dialogo = new OpenFileDialog();
+            dialogo.Title = "Seleccionar archivo de alumnos";
+            dialogo.Filter = "Archivos de Excel (*.xlsx)|*.xlsx";
+
+            if (dialogo.ShowDialog() == DialogResult.OK)
             {
-                //verifica que el usuario haya seleccionado un archivo
-                if (ofd.ShowDialog() == DialogResult.OK)
+                try
                 {
-                    rutaArchivo = ofd.FileName; //guarda la ruta del archivo elegdo
+                    alumnos.Clear();
 
-                    //verifica que el archivo no este abrierto
-                    try
+                    using (var libro = new XLWorkbook(dialogo.FileName))
                     {
-                        //abre el archivo en modo lectura
-                        using (var stream = File.Open(ofd.FileName, FileMode.Open, FileAccess.Read))
+                        var hoja = libro.Worksheet(1);
+                        var ultimaFila = hoja.LastRowUsed().RowNumber();
+
+                        for (int fila = 2; fila <= ultimaFila; fila++)
                         {
-                            //crea un lector para archivos excel
-                            using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
+                            string nombre = hoja.Cell(fila, 3).Value.ToString();
+
+                            if (string.IsNullOrWhiteSpace(nombre))
                             {
-                                // Convierte el archivo en tablas
-                                var dataSet = reader.AsDataSet(new ExcelDataSetConfiguration()
-                                {
-                                    ConfigureDataTable = (tableReader) => new ExcelDataTableConfiguration()
-                                    {
-                                        UseHeaderRow = true //para tomar la primera fila como encabezado
-                                    }
-                                });
-
-                                dataGridView1.DataSource = dataSet.Tables[0];
-
-                                //encabezados de las columnas
-                                dataGridView1.Columns[0].HeaderText = "N° lista";
-                                dataGridView1.Columns[1].HeaderText = "ID";
-                                dataGridView1.Columns[2].HeaderText = "Nombre";
-                                dataGridView1.Columns[3].HeaderText = "ApellidoP";
-                                dataGridView1.Columns[4].HeaderText = "ApellidoM";
-
-                                //ajusta el tamaño de las celdas
-                                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                                dataGridView1.AutoResizeColumns();
-
-                                dataGridView1.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12); //funte del texto
+                                continue;
                             }
+
+                            int numeroLista = 0;
+                            int.TryParse(hoja.Cell(fila, 1).Value.ToString(), out numeroLista);
+
+                            AlumnoExcel alumno = new AlumnoExcel();
+
+                            alumno.NumeroLista = numeroLista;
+                            alumno.ID = hoja.Cell(fila, 2).Value.ToString();
+                            alumno.Nombre = hoja.Cell(fila, 3).Value.ToString();
+                            alumno.ApellidoP = hoja.Cell(fila, 4).Value.ToString();
+                            alumno.ApellidoM = hoja.Cell(fila, 5).Value.ToString();
+
+                            alumnos.Add(alumno);
                         }
                     }
-                    catch (IOException ex) //si es achivo está abierto muestra un mensaje
-                    {
-                        MessageBox.Show("El archivo está en abierto.\nCiérrelo antes de continuar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+
+                    MostrarAlumnosEnTabla();
+
+                    MessageBox.Show("Alumnos importados correctamente.", "Importación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // Pedir al usuario el nombre de la columna a eliminar
-            string nombreColumna = Microsoft.VisualBasic.Interaction.InputBox(
-                "Escribe el nombre de la columna que deseas eliminar:",
-                "Eliminar columna",
-                ""
-            );
-
-            if (!string.IsNullOrWhiteSpace(nombreColumna) && dataGridView1.Columns.Contains(nombreColumna))
-            {
-                dataGridView1.Columns.Remove(nombreColumna);
-            }
-            else
-            {
-                MessageBox.Show("La columna " + nombreColumna + " no existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void agregarColumna_Click(object sender, EventArgs e)
-        {
-            string nombreColumna = Microsoft.VisualBasic.Interaction.InputBox(
-                "Escribe el nombre de la nueva columna:",
-                "Agregar columna",
-                "NuevaColumna"
-            );
-
-            if (!string.IsNullOrWhiteSpace(nombreColumna))
-            {
-                // Agregar columna al DataGridView
-                dataGridView1.Columns.Add(nombreColumna, nombreColumna);
-
-                // inicializa las celdas vacías
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                catch (Exception ex)
                 {
-                    row.Cells[nombreColumna].Value = "";
+                    MessageBox.Show("Error al importar alumnos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
-        private void exportar_Click(object sender, EventArgs e)
+     
+        private void MostrarAlumnosEnTabla()
         {
-            ExportarExcel(dataGridView1); //llama la función de exportar
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = alumnos;
+        }
+        private void btnMostrarAlumnos_Click(object sender, EventArgs e)
+        {
+            MostrarAlumnosEnTabla();
         }
 
-        //función de exportar
-        private void ExportarExcel(DataGridView dataGridView)
+        private void panelSistema_Paint(object sender, PaintEventArgs e)
         {
-            if (string.IsNullOrEmpty(rutaArchivo)) //si no se seleccionó un archivo muestra un mensaje
-            {
-                MessageBox.Show("No hay archivo importado para exportar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
-            Excel.Application excelApp = new Excel.Application();
-            excelApp.Visible = true;
-
-            try
-            {
-                Excel.Workbook workbook = excelApp.Workbooks.Open(rutaArchivo); //abre el archivo
-                Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Sheets[1]; //obtiene la primera hoja
-
-                //obtiene el numero dde columnas 
-                int columCount = dataGridView.ColumnCount;
-                for (int i = 0; i < columCount; i++)
-                {
-                    worksheet.Cells[1, i + 1] = dataGridView.Columns[i].HeaderText; //escribe el encabezados
-                }
-
-                //obtiene las filas
-                int rowCount = dataGridView.RowCount;
-                for (int i = 0; i < rowCount; i++)
-                {
-                    for (int j = 0; j < columCount; j++)
-                    {
-                        worksheet.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value?.ToString();//escribe lo datos de las celdas
-                    }
-                }
-
-                workbook.Save(); //guarda los cambios
-                MessageBox.Show("Cambios guardados en: " + rutaArchivo);
-            }
-            catch (System.Runtime.InteropServices.COMException ex) //por si esta abierto el archivo
-            {
-                MessageBox.Show("El archivo está abierto en Excel. Ciérrelo antes de exportar.",
-                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally //al finalizar cierra EXCEL
-            {
-                excelApp.Quit();
-            }
         }
     }
 }

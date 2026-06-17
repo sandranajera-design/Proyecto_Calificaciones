@@ -52,7 +52,7 @@
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(178, 338);
             this.panelMenu.TabIndex = 8;
@@ -62,7 +62,7 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Location = new System.Drawing.Point(60, 261);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(114, 58);
             this.btnSalir.TabIndex = 10;
@@ -75,7 +75,7 @@
             this.btnEliminarGrupo.FlatAppearance.BorderSize = 0;
             this.btnEliminarGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarGrupo.Location = new System.Drawing.Point(60, 199);
-            this.btnEliminarGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarGrupo.Name = "btnEliminarGrupo";
             this.btnEliminarGrupo.Size = new System.Drawing.Size(114, 58);
             this.btnEliminarGrupo.TabIndex = 9;
@@ -88,7 +88,7 @@
             this.btnVerListaGrupos.FlatAppearance.BorderSize = 0;
             this.btnVerListaGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerListaGrupos.Location = new System.Drawing.Point(60, 133);
-            this.btnVerListaGrupos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerListaGrupos.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerListaGrupos.Name = "btnVerListaGrupos";
             this.btnVerListaGrupos.Size = new System.Drawing.Size(114, 58);
             this.btnVerListaGrupos.TabIndex = 8;
@@ -101,7 +101,7 @@
             this.btnCrearNuevoGrupo.FlatAppearance.BorderSize = 0;
             this.btnCrearNuevoGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearNuevoGrupo.Location = new System.Drawing.Point(60, 72);
-            this.btnCrearNuevoGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrearNuevoGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearNuevoGrupo.Name = "btnCrearNuevoGrupo";
             this.btnCrearNuevoGrupo.Size = new System.Drawing.Size(114, 58);
             this.btnCrearNuevoGrupo.TabIndex = 7;
@@ -114,7 +114,7 @@
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(178, 52);
             this.panel1.TabIndex = 5;
@@ -126,7 +126,7 @@
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.Location = new System.Drawing.Point(3, 6);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(28, 40);
             this.btnMenu.TabIndex = 6;
@@ -139,10 +139,11 @@
             this.panelSistema.Controls.Add(this.label1);
             this.panelSistema.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSistema.Location = new System.Drawing.Point(178, 0);
-            this.panelSistema.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSistema.Margin = new System.Windows.Forms.Padding(2);
             this.panelSistema.Name = "panelSistema";
             this.panelSistema.Size = new System.Drawing.Size(507, 338);
             this.panelSistema.TabIndex = 10;
+            this.panelSistema.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSistema_Paint);
             // 
             // label2
             // 
@@ -171,7 +172,7 @@
             this.ClientSize = new System.Drawing.Size(685, 338);
             this.Controls.Add(this.panelSistema);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CapturarCalificaciones1";
             this.Text = "CapturarCalificaciones1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

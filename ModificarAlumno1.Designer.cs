@@ -36,11 +36,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.panelSistema = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.SeleccionarAlumno = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSistema.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -52,17 +54,19 @@
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(355, 735);
+            this.panelMenu.Size = new System.Drawing.Size(178, 594);
             this.panelMenu.TabIndex = 10;
             // 
             // btnSalir
             // 
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Location = new System.Drawing.Point(121, 501);
+            this.btnSalir.Location = new System.Drawing.Point(60, 261);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(228, 112);
+            this.btnSalir.Size = new System.Drawing.Size(114, 58);
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -72,9 +76,10 @@
             // 
             this.btnEliminarGrupo.FlatAppearance.BorderSize = 0;
             this.btnEliminarGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarGrupo.Location = new System.Drawing.Point(121, 383);
+            this.btnEliminarGrupo.Location = new System.Drawing.Point(60, 199);
+            this.btnEliminarGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarGrupo.Name = "btnEliminarGrupo";
-            this.btnEliminarGrupo.Size = new System.Drawing.Size(228, 112);
+            this.btnEliminarGrupo.Size = new System.Drawing.Size(114, 58);
             this.btnEliminarGrupo.TabIndex = 9;
             this.btnEliminarGrupo.Text = "Eliminar grupo";
             this.btnEliminarGrupo.UseVisualStyleBackColor = true;
@@ -84,9 +89,10 @@
             // 
             this.btnVerListaGrupos.FlatAppearance.BorderSize = 0;
             this.btnVerListaGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerListaGrupos.Location = new System.Drawing.Point(121, 256);
+            this.btnVerListaGrupos.Location = new System.Drawing.Point(60, 133);
+            this.btnVerListaGrupos.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerListaGrupos.Name = "btnVerListaGrupos";
-            this.btnVerListaGrupos.Size = new System.Drawing.Size(228, 112);
+            this.btnVerListaGrupos.Size = new System.Drawing.Size(114, 58);
             this.btnVerListaGrupos.TabIndex = 8;
             this.btnVerListaGrupos.Text = "Ver lista de grupos";
             this.btnVerListaGrupos.UseVisualStyleBackColor = true;
@@ -96,9 +102,10 @@
             // 
             this.btnCrearNuevoGrupo.FlatAppearance.BorderSize = 0;
             this.btnCrearNuevoGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearNuevoGrupo.Location = new System.Drawing.Point(121, 138);
+            this.btnCrearNuevoGrupo.Location = new System.Drawing.Point(60, 72);
+            this.btnCrearNuevoGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearNuevoGrupo.Name = "btnCrearNuevoGrupo";
-            this.btnCrearNuevoGrupo.Size = new System.Drawing.Size(228, 112);
+            this.btnCrearNuevoGrupo.Size = new System.Drawing.Size(114, 58);
             this.btnCrearNuevoGrupo.TabIndex = 7;
             this.btnCrearNuevoGrupo.Text = "Crear Nuevo Grupo";
             this.btnCrearNuevoGrupo.UseVisualStyleBackColor = true;
@@ -109,8 +116,9 @@
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(355, 100);
+            this.panel1.Size = new System.Drawing.Size(178, 52);
             this.panel1.TabIndex = 5;
             // 
             // btnMenu
@@ -119,48 +127,63 @@
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.Location = new System.Drawing.Point(6, 12);
+            this.btnMenu.Location = new System.Drawing.Point(3, 6);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(56, 76);
+            this.btnMenu.Size = new System.Drawing.Size(28, 40);
             this.btnMenu.TabIndex = 6;
             this.btnMenu.Text = "☰";
             this.btnMenu.UseVisualStyleBackColor = false;
             // 
             // panelSistema
             // 
-            this.panelSistema.Controls.Add(this.label2);
+            this.panelSistema.Controls.Add(this.SeleccionarAlumno);
+            this.panelSistema.Controls.Add(this.dataGridView1);
             this.panelSistema.Controls.Add(this.label1);
             this.panelSistema.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSistema.Location = new System.Drawing.Point(355, 0);
+            this.panelSistema.Location = new System.Drawing.Point(178, 0);
+            this.panelSistema.Margin = new System.Windows.Forms.Padding(2);
             this.panelSistema.Name = "panelSistema";
-            this.panelSistema.Size = new System.Drawing.Size(1232, 735);
+            this.panelSistema.Size = new System.Drawing.Size(736, 594);
             this.panelSistema.TabIndex = 11;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(207, 182);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(683, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "** depende de la cantidad de grupos se agregan botones dinamicos **";
+            this.panelSistema.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSistema_Paint);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(271, 63);
+            this.label1.Location = new System.Drawing.Point(136, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(472, 25);
+            this.label1.Size = new System.Drawing.Size(241, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Seleccione el grupo al cual pertenece el alumno";
+            this.label1.Text = "Seleccione el alumno al cual pertenece el alumno";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(36, 72);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(552, 522);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // SeleccionarAlumno
+            // 
+            this.SeleccionarAlumno.Location = new System.Drawing.Point(632, 229);
+            this.SeleccionarAlumno.Name = "SeleccionarAlumno";
+            this.SeleccionarAlumno.Size = new System.Drawing.Size(92, 52);
+            this.SeleccionarAlumno.TabIndex = 2;
+            this.SeleccionarAlumno.Text = "Seleccionar Alumno";
+            this.SeleccionarAlumno.UseVisualStyleBackColor = true;
+            this.SeleccionarAlumno.Click += new System.EventHandler(this.btnSeleccionarAlumno_Click);
             // 
             // ModificarAlumno1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1587, 735);
+            this.ClientSize = new System.Drawing.Size(914, 594);
             this.Controls.Add(this.panelSistema);
             this.Controls.Add(this.panelMenu);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ModificarAlumno1";
             this.Text = "ModificarAlumno1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -168,6 +191,7 @@
             this.panel1.ResumeLayout(false);
             this.panelSistema.ResumeLayout(false);
             this.panelSistema.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,7 +206,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Panel panelSistema;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button SeleccionarAlumno;
     }
 }

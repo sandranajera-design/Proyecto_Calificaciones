@@ -34,6 +34,7 @@ namespace Proyecto_Calificaciones
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            List<ApartadoEvaluacion> apartados = new List<ApartadoEvaluacion>();
             decimal sumaPorcentajes = 0;
 
             for (int i = 0; i < cantidadApartados; i++)
@@ -53,8 +54,9 @@ namespace Proyecto_Calificaciones
                 }
 
                 decimal porcentaje;
+                string textoPorcentaje = txtPorcentajesApartados[i].Text.Replace("%", "").Trim();
 
-                if (!decimal.TryParse(txtPorcentajesApartados[i].Text, out porcentaje))
+                if (!decimal.TryParse(textoPorcentaje, out porcentaje))
                 {
                     MessageBox.Show("El porcentaje del apartado " + (i + 1) + " debe ser un número.", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtPorcentajesApartados[i].Focus();
@@ -69,6 +71,12 @@ namespace Proyecto_Calificaciones
                 }
 
                 sumaPorcentajes += porcentaje;
+
+                apartados.Add(new ApartadoEvaluacion
+                {
+                    Nombre = txtNombresApartados[i].Text.Trim(),
+                    Porcentaje = porcentaje
+                });
             }
 
             if (sumaPorcentajes != 100)
@@ -77,7 +85,7 @@ namespace Proyecto_Calificaciones
                 return;
             }
 
-            CrearGrupo3 form = new CrearGrupo3();
+            CrearGrupo3 form = new CrearGrupo3(nombreGrupo, apartados);
             form.Show();
 
             this.Hide();
@@ -103,7 +111,7 @@ namespace Proyecto_Calificaciones
 
         private void btnVerListaGrupos_Click(object sender, EventArgs e)
         {
-            VerListaGrupos form = new VerListaGrupos();
+            VerListaGrupos2 form = new VerListaGrupos2();
             form.Show();
 
             this.Hide();

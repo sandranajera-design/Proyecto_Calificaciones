@@ -12,11 +12,17 @@ namespace Proyecto_Calificaciones
 {
     public partial class VerListaGrupos : Form
     {
+        private string rutaArchivo;
         public VerListaGrupos()
         {
             InitializeComponent();
         }
+        public VerListaGrupos(string rutaArchivo)
+        {
+            InitializeComponent();
 
+            this.rutaArchivo = rutaArchivo;
+        }
         private void btnCrearNuevoGrupo_Click(object sender, EventArgs e)
         {
             CrearGrupo1 form = new CrearGrupo1();
@@ -37,7 +43,7 @@ namespace Proyecto_Calificaciones
 
         private void btnVerListaGrupos_Click(object sender, EventArgs e)
         {
-            VerListaGrupos form = new VerListaGrupos();
+            VerListaGrupos2 form = new VerListaGrupos2();
             form.Show();
 
             this.Hide();
@@ -53,7 +59,7 @@ namespace Proyecto_Calificaciones
 
         private void btnEliminarAlumno_Click(object sender, EventArgs e)
         {
-            EliminarAlumno1 form = new EliminarAlumno1();
+            EliminarAlumno1 form = new EliminarAlumno1(rutaArchivo);
             form.Show();
 
             this.Hide();
@@ -61,7 +67,7 @@ namespace Proyecto_Calificaciones
 
         private void btnModificarAlumno_Click(object sender, EventArgs e)
         {
-            ModificarAlumno1 form = new ModificarAlumno1();
+            ModificarAlumno1 form = new ModificarAlumno1(rutaArchivo);
             form.Show();
 
             this.Hide();
@@ -69,10 +75,15 @@ namespace Proyecto_Calificaciones
 
         private void btnCapturarCalificaciones_Click(object sender, EventArgs e)
         {
-            CapturarCalificaciones1 form = new CapturarCalificaciones1();
+            CapturarCalificaciones2 form = new CapturarCalificaciones2(rutaArchivo);
             form.Show();
 
             this.Hide();
+        }
+
+        private void panelSistema_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

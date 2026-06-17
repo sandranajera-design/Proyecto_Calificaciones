@@ -41,7 +41,7 @@ namespace Proyecto_Calificaciones
 
         private void btnVerListaGrupos_Click(object sender, EventArgs e)
         {
-            VerListaGrupos form = new VerListaGrupos();
+            VerListaGrupos2 form = new VerListaGrupos2();
             form.Show();
 
             this.Hide();
@@ -53,6 +53,11 @@ namespace Proyecto_Calificaciones
             form.Show();
 
             this.Hide();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

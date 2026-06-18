@@ -47,6 +47,7 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.BackColor = System.Drawing.Color.SteelBlue;
             this.panelMenu.Controls.Add(this.btnSalir);
             this.panelMenu.Controls.Add(this.btnEliminarGrupo);
             this.panelMenu.Controls.Add(this.btnVerListaGrupos);
@@ -54,19 +55,21 @@
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(178, 532);
+            this.panelMenu.Size = new System.Drawing.Size(237, 655);
             this.panelMenu.TabIndex = 11;
             // 
             // btnSalir
             // 
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Location = new System.Drawing.Point(60, 261);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalir.Location = new System.Drawing.Point(80, 321);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(114, 58);
+            this.btnSalir.Size = new System.Drawing.Size(152, 71);
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -76,10 +79,12 @@
             // 
             this.btnEliminarGrupo.FlatAppearance.BorderSize = 0;
             this.btnEliminarGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarGrupo.Location = new System.Drawing.Point(60, 199);
-            this.btnEliminarGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarGrupo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEliminarGrupo.Location = new System.Drawing.Point(80, 245);
+            this.btnEliminarGrupo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarGrupo.Name = "btnEliminarGrupo";
-            this.btnEliminarGrupo.Size = new System.Drawing.Size(114, 58);
+            this.btnEliminarGrupo.Size = new System.Drawing.Size(152, 71);
             this.btnEliminarGrupo.TabIndex = 9;
             this.btnEliminarGrupo.Text = "Eliminar grupo";
             this.btnEliminarGrupo.UseVisualStyleBackColor = true;
@@ -89,10 +94,12 @@
             // 
             this.btnVerListaGrupos.FlatAppearance.BorderSize = 0;
             this.btnVerListaGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerListaGrupos.Location = new System.Drawing.Point(60, 133);
-            this.btnVerListaGrupos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerListaGrupos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnVerListaGrupos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnVerListaGrupos.Location = new System.Drawing.Point(80, 164);
+            this.btnVerListaGrupos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVerListaGrupos.Name = "btnVerListaGrupos";
-            this.btnVerListaGrupos.Size = new System.Drawing.Size(114, 58);
+            this.btnVerListaGrupos.Size = new System.Drawing.Size(152, 71);
             this.btnVerListaGrupos.TabIndex = 8;
             this.btnVerListaGrupos.Text = "Ver lista de grupos";
             this.btnVerListaGrupos.UseVisualStyleBackColor = true;
@@ -102,10 +109,12 @@
             // 
             this.btnCrearNuevoGrupo.FlatAppearance.BorderSize = 0;
             this.btnCrearNuevoGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearNuevoGrupo.Location = new System.Drawing.Point(60, 72);
-            this.btnCrearNuevoGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrearNuevoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnCrearNuevoGrupo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCrearNuevoGrupo.Location = new System.Drawing.Point(80, 89);
+            this.btnCrearNuevoGrupo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrearNuevoGrupo.Name = "btnCrearNuevoGrupo";
-            this.btnCrearNuevoGrupo.Size = new System.Drawing.Size(114, 58);
+            this.btnCrearNuevoGrupo.Size = new System.Drawing.Size(152, 71);
             this.btnCrearNuevoGrupo.TabIndex = 7;
             this.btnCrearNuevoGrupo.Text = "Crear Nuevo Grupo";
             this.btnCrearNuevoGrupo.UseVisualStyleBackColor = true;
@@ -116,9 +125,9 @@
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(178, 52);
+            this.panel1.Size = new System.Drawing.Size(237, 64);
             this.panel1.TabIndex = 5;
             // 
             // btnMenu
@@ -127,66 +136,71 @@
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.Location = new System.Drawing.Point(3, 6);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu.Location = new System.Drawing.Point(4, 7);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(28, 40);
+            this.btnMenu.Size = new System.Drawing.Size(37, 49);
             this.btnMenu.TabIndex = 6;
             this.btnMenu.Text = "☰";
             this.btnMenu.UseVisualStyleBackColor = false;
             // 
             // panelSistema
             // 
+            this.panelSistema.BackgroundImage = global::Proyecto_Calificaciones.Properties.Resources.Fondo;
             this.panelSistema.Controls.Add(this.btnGuardarCambios);
             this.panelSistema.Controls.Add(this.dataGridView1);
             this.panelSistema.Controls.Add(this.label1);
             this.panelSistema.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSistema.Location = new System.Drawing.Point(178, 0);
-            this.panelSistema.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSistema.Location = new System.Drawing.Point(237, 0);
+            this.panelSistema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSistema.Name = "panelSistema";
-            this.panelSistema.Size = new System.Drawing.Size(713, 532);
+            this.panelSistema.Size = new System.Drawing.Size(951, 655);
             this.panelSistema.TabIndex = 12;
             this.panelSistema.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSistema_Paint);
             // 
             // btnGuardarCambios
             // 
-            this.btnGuardarCambios.Location = new System.Drawing.Point(269, 327);
-            this.btnGuardarCambios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardarCambios.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnGuardarCambios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnGuardarCambios.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnGuardarCambios.Location = new System.Drawing.Point(330, 415);
+            this.btnGuardarCambios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarCambios.Name = "btnGuardarCambios";
-            this.btnGuardarCambios.Size = new System.Drawing.Size(120, 56);
+            this.btnGuardarCambios.Size = new System.Drawing.Size(182, 69);
             this.btnGuardarCambios.TabIndex = 2;
             this.btnGuardarCambios.Text = "Guardar Cambios";
-            this.btnGuardarCambios.UseVisualStyleBackColor = true;
+            this.btnGuardarCambios.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 72);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(49, 89);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(602, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(803, 304);
             this.dataGridView1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(224, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(361, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.Size = new System.Drawing.Size(125, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Modificar alumno";
             // 
             // ModificarAlumno2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 532);
+            this.ClientSize = new System.Drawing.Size(1188, 655);
             this.Controls.Add(this.panelSistema);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ModificarAlumno2";
             this.Text = "ModificarAlumno2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

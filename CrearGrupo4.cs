@@ -61,5 +61,10 @@ namespace Proyecto_Calificaciones
             
            
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -72,6 +72,61 @@ namespace Proyecto_Calificaciones
         private void Registrarse_Load(object sender, EventArgs e)
         {
             txtContrasena.UseSystemPasswordChar = true;
+
+            // Centrar el panel al cargar
+            CentrarControles();
+        }
+
+        /* Método para centrar el panel */
+        private void CentrarControles()
+        {
+            // Define un bloque mínimo (para que no se vea pequeño)
+            int anchoBloque = Math.Max(this.ClientSize.Width / 2, 800);   
+            int altoBloque = Math.Max(this.ClientSize.Height / 2, 400);   
+
+            // Calcula el centro del formulario
+            int centroX = this.ClientSize.Width / 2;
+            int centroY = this.ClientSize.Height / 2;
+
+            // Punto de inicio del bloque
+            int inicioX = centroX - (anchoBloque / 2);
+            int inicioY = centroY - (altoBloque / 2);
+
+            
+            label1.Left = inicioX + (anchoBloque / 2) - (label1.Width / 2);
+            label1.Top = inicioY + 20;
+
+            label2.Left = inicioX + 280;
+            label2.Top = label1.Bottom + 50;
+
+            txtUsuario.Left = label2.Right + 60;
+            txtUsuario.Top = label2.Top;
+
+            label3.Left = label2.Left;
+            label3.Top = txtUsuario.Bottom + 40;
+
+            txtContrasena.Left = label3.Right + 20;
+            txtContrasena.Top = label3.Top;
+
+            btnIniciarSesion.Left = inicioX + (anchoBloque / 2) - (btnIniciarSesion.Width / 2);
+            btnIniciarSesion.Top = btnRegistrarse.Bottom + 280;
+
+            btnRegistrarse.Left = inicioX + (anchoBloque / 2) - (btnRegistrarse.Width / 2);
+            btnRegistrarse.Top = txtContrasena.Bottom + 60;
+        }
+
+
+
+
+       
+        private void IniciarSesion_Resize(object sender, EventArgs e)
+        {
+            CentrarControles();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
         }
     }
 }
+

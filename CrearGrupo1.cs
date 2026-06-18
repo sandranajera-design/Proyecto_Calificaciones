@@ -13,9 +13,13 @@ namespace Proyecto_Calificaciones
     public partial class CrearGrupo1 : Form
     {
         bool menuAbierto = true;
+
         public CrearGrupo1()
         {
             InitializeComponent();
+
+            this.Load += CrearGrupo1_Load;
+            this.Resize += CrearGrupo1_Resize;
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -42,7 +46,11 @@ namespace Proyecto_Calificaciones
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            DialogResult respuesta = MessageBox.Show( "¿Desea salir del programa?","Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult respuesta = MessageBox.Show(
+                "¿Desea salir del programa?",
+                "Confirmar salida",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
 
             if (respuesta == DialogResult.Yes)
             {
@@ -88,7 +96,6 @@ namespace Proyecto_Calificaciones
             this.Hide();
         }
 
-
         private void btnVerListaGrupos_Click(object sender, EventArgs e)
         {
             VerListaGrupos2 form = new VerListaGrupos2();
@@ -106,6 +113,64 @@ namespace Proyecto_Calificaciones
         }
 
         private void panelSistema_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        // ===== MÉTODOS DE CENTRADO =====
+
+        private void CentrarPanelSistema()
+        {
+            panelSistema.Left = (this.ClientSize.Width - panelSistema.Width) / 2;
+            panelSistema.Top = (this.ClientSize.Height - panelSistema.Height) / 2;
+        }
+
+        private void CentrarControles()
+        {
+            int centroX = panelSistema.Width / 2;
+
+            label1.Left = centroX - (label1.Width / 2);
+            label1.Top = 140;
+
+            txtNombreGrupo.Left = centroX - (txtNombreGrupo.Width / 2);
+            txtNombreGrupo.Top = label1.Bottom + 40;
+
+            label2.Left = centroX - (label2.Width / 2);
+            label2.Top = txtNombreGrupo.Bottom + 50;
+
+            txtCantidadApartados.Left = centroX - (txtCantidadApartados.Width / 2);
+            txtCantidadApartados.Top = label2.Bottom + 50;
+
+            btnSiguiente.Left = centroX - (btnSiguiente.Width / 2);
+            btnSiguiente.Top = txtCantidadApartados.Bottom + 40;
+        }
+
+        private void CrearGrupo1_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            CentrarPanelSistema();
+            CentrarControles();
+        }
+
+        private void CrearGrupo1_Resize(object sender, EventArgs e)
+        {
+            CentrarPanelSistema();
+            CentrarControles();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreGrupo_TextChanged(object sender, EventArgs e)
         {
 
         }

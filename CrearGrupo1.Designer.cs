@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelSistema = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.txtNombreGrupo = new System.Windows.Forms.TextBox();
             this.txtCantidadApartados = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnSiguiente = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEliminarGrupo = new System.Windows.Forms.Button();
@@ -40,61 +41,87 @@
             this.btnCrearNuevoGrupo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.panelSistema = new System.Windows.Forms.Panel();
+            this.panelSistema.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelSistema.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // panelSistema
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(188, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ingrese el nombre del grupo";
-            // 
-            // txtNombreGrupo
-            // 
-            this.txtNombreGrupo.Location = new System.Drawing.Point(190, 58);
-            this.txtNombreGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtNombreGrupo.Name = "txtNombreGrupo";
-            this.txtNombreGrupo.Size = new System.Drawing.Size(140, 20);
-            this.txtNombreGrupo.TabIndex = 1;
-            // 
-            // txtCantidadApartados
-            // 
-            this.txtCantidadApartados.Location = new System.Drawing.Point(194, 145);
-            this.txtCantidadApartados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtCantidadApartados.Name = "txtCantidadApartados";
-            this.txtCantidadApartados.Size = new System.Drawing.Size(152, 20);
-            this.txtCantidadApartados.TabIndex = 3;
+            this.panelSistema.BackgroundImage = global::Proyecto_Calificaciones.Properties.Resources.Fondo;
+            this.panelSistema.Controls.Add(this.label2);
+            this.panelSistema.Controls.Add(this.label1);
+            this.panelSistema.Controls.Add(this.btnSiguiente);
+            this.panelSistema.Controls.Add(this.txtNombreGrupo);
+            this.panelSistema.Controls.Add(this.txtCantidadApartados);
+            this.panelSistema.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSistema.Location = new System.Drawing.Point(237, 0);
+            this.panelSistema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelSistema.Name = "panelSistema";
+            this.panelSistema.Size = new System.Drawing.Size(676, 433);
+            this.panelSistema.TabIndex = 7;
+            this.panelSistema.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSistema_Paint);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(188, 117);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(120, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 13);
+            this.label2.Size = new System.Drawing.Size(459, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ingrese la cantidad de apartados";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(120, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(394, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ingrese el nombre del grupo";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(194, 223);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSiguiente.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSiguiente.ForeColor = System.Drawing.Color.Cornsilk;
+            this.btnSiguiente.Location = new System.Drawing.Point(128, 313);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(116, 44);
+            this.btnSiguiente.Size = new System.Drawing.Size(178, 67);
             this.btnSiguiente.TabIndex = 4;
             this.btnSiguiente.Text = "Siguiente";
-            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
+            // txtNombreGrupo
+            // 
+            this.txtNombreGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.txtNombreGrupo.Location = new System.Drawing.Point(126, 128);
+            this.txtNombreGrupo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombreGrupo.Name = "txtNombreGrupo";
+            this.txtNombreGrupo.Size = new System.Drawing.Size(388, 32);
+            this.txtNombreGrupo.TabIndex = 1;
+            this.txtNombreGrupo.TextChanged += new System.EventHandler(this.txtNombreGrupo_TextChanged);
+            // 
+            // txtCantidadApartados
+            // 
+            this.txtCantidadApartados.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.txtCantidadApartados.Location = new System.Drawing.Point(128, 242);
+            this.txtCantidadApartados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCantidadApartados.Name = "txtCantidadApartados";
+            this.txtCantidadApartados.Size = new System.Drawing.Size(386, 32);
+            this.txtCantidadApartados.TabIndex = 3;
             // 
             // panelMenu
             // 
+            this.panelMenu.BackgroundImage = global::Proyecto_Calificaciones.Properties.Resources.anvotguesa;
             this.panelMenu.Controls.Add(this.btnSalir);
             this.panelMenu.Controls.Add(this.btnEliminarGrupo);
             this.panelMenu.Controls.Add(this.btnVerListaGrupos);
@@ -102,71 +129,84 @@
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(178, 352);
+            this.panelMenu.Size = new System.Drawing.Size(237, 433);
             this.panelMenu.TabIndex = 5;
             // 
             // btnSalir
             // 
+            this.btnSalir.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Location = new System.Drawing.Point(60, 261);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalir.Location = new System.Drawing.Point(80, 321);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(114, 58);
+            this.btnSalir.Size = new System.Drawing.Size(152, 71);
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminarGrupo
             // 
+            this.btnEliminarGrupo.BackColor = System.Drawing.Color.SteelBlue;
             this.btnEliminarGrupo.FlatAppearance.BorderSize = 0;
             this.btnEliminarGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarGrupo.Location = new System.Drawing.Point(60, 199);
-            this.btnEliminarGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarGrupo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEliminarGrupo.Location = new System.Drawing.Point(80, 245);
+            this.btnEliminarGrupo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarGrupo.Name = "btnEliminarGrupo";
-            this.btnEliminarGrupo.Size = new System.Drawing.Size(114, 58);
+            this.btnEliminarGrupo.Size = new System.Drawing.Size(152, 71);
             this.btnEliminarGrupo.TabIndex = 9;
             this.btnEliminarGrupo.Text = "Eliminar grupo";
-            this.btnEliminarGrupo.UseVisualStyleBackColor = true;
+            this.btnEliminarGrupo.UseVisualStyleBackColor = false;
             this.btnEliminarGrupo.Click += new System.EventHandler(this.btnEliminarGrupo_Click);
             // 
             // btnVerListaGrupos
             // 
+            this.btnVerListaGrupos.BackColor = System.Drawing.Color.SteelBlue;
             this.btnVerListaGrupos.FlatAppearance.BorderSize = 0;
             this.btnVerListaGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerListaGrupos.Location = new System.Drawing.Point(60, 133);
-            this.btnVerListaGrupos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerListaGrupos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnVerListaGrupos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnVerListaGrupos.Location = new System.Drawing.Point(80, 164);
+            this.btnVerListaGrupos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVerListaGrupos.Name = "btnVerListaGrupos";
-            this.btnVerListaGrupos.Size = new System.Drawing.Size(114, 58);
+            this.btnVerListaGrupos.Size = new System.Drawing.Size(152, 71);
             this.btnVerListaGrupos.TabIndex = 8;
             this.btnVerListaGrupos.Text = "Ver lista de grupos";
-            this.btnVerListaGrupos.UseVisualStyleBackColor = true;
+            this.btnVerListaGrupos.UseVisualStyleBackColor = false;
             this.btnVerListaGrupos.Click += new System.EventHandler(this.btnVerListaGrupos_Click);
             // 
             // btnCrearNuevoGrupo
             // 
+            this.btnCrearNuevoGrupo.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCrearNuevoGrupo.FlatAppearance.BorderSize = 0;
             this.btnCrearNuevoGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearNuevoGrupo.Location = new System.Drawing.Point(60, 72);
-            this.btnCrearNuevoGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrearNuevoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnCrearNuevoGrupo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCrearNuevoGrupo.Location = new System.Drawing.Point(80, 89);
+            this.btnCrearNuevoGrupo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrearNuevoGrupo.Name = "btnCrearNuevoGrupo";
-            this.btnCrearNuevoGrupo.Size = new System.Drawing.Size(114, 58);
+            this.btnCrearNuevoGrupo.Size = new System.Drawing.Size(152, 71);
             this.btnCrearNuevoGrupo.TabIndex = 7;
             this.btnCrearNuevoGrupo.Text = "Crear Nuevo Grupo";
-            this.btnCrearNuevoGrupo.UseVisualStyleBackColor = true;
+            this.btnCrearNuevoGrupo.UseVisualStyleBackColor = false;
             this.btnCrearNuevoGrupo.Click += new System.EventHandler(this.btnCrearNuevoGrupo_Click);
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::Proyecto_Calificaciones.Properties.Resources.anvotguesa;
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(178, 52);
+            this.panel1.Size = new System.Drawing.Size(237, 64);
             this.panel1.TabIndex = 5;
             // 
             // btnMenu
@@ -175,48 +215,34 @@
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.Location = new System.Drawing.Point(3, 6);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMenu.Location = new System.Drawing.Point(4, 7);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(28, 40);
+            this.btnMenu.Size = new System.Drawing.Size(37, 49);
             this.btnMenu.TabIndex = 6;
             this.btnMenu.Text = "☰";
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // panelSistema
-            // 
-            this.panelSistema.Controls.Add(this.label2);
-            this.panelSistema.Controls.Add(this.label1);
-            this.panelSistema.Controls.Add(this.btnSiguiente);
-            this.panelSistema.Controls.Add(this.txtNombreGrupo);
-            this.panelSistema.Controls.Add(this.txtCantidadApartados);
-            this.panelSistema.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSistema.Location = new System.Drawing.Point(178, 0);
-            this.panelSistema.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panelSistema.Name = "panelSistema";
-            this.panelSistema.Size = new System.Drawing.Size(507, 352);
-            this.panelSistema.TabIndex = 7;
-            this.panelSistema.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSistema_Paint);
-            // 
             // CrearGrupo1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 352);
+            this.ClientSize = new System.Drawing.Size(913, 433);
             this.Controls.Add(this.panelSistema);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "CrearGrupo1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrearGrupo1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panelMenu.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panelSistema.ResumeLayout(false);
             this.panelSistema.PerformLayout();
+            this.panelMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

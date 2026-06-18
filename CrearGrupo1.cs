@@ -52,16 +52,46 @@ namespace Proyecto_Calificaciones
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            CrearGrupo2 form = new CrearGrupo2();
+            if (string.IsNullOrWhiteSpace(txtNombreGrupo.Text))
+            {
+                MessageBox.Show("Debe ingresar el nombre del grupo.", "Campo obligatorio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombreGrupo.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCantidadApartados.Text))
+            {
+                MessageBox.Show("Debe ingresar la cantidad de apartados.", "Campo obligatorio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCantidadApartados.Focus();
+                return;
+            }
+
+            int cantidadApartados;
+
+            if (!int.TryParse(txtCantidadApartados.Text, out cantidadApartados))
+            {
+                MessageBox.Show("La cantidad de apartados debe ser un número.", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCantidadApartados.Focus();
+                return;
+            }
+
+            if (cantidadApartados <= 0)
+            {
+                MessageBox.Show("La cantidad de apartados debe ser mayor a cero.", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCantidadApartados.Focus();
+                return;
+            }
+
+            CrearGrupo2 form = new CrearGrupo2(txtNombreGrupo.Text, cantidadApartados);
             form.Show();
 
             this.Hide();
-
         }
+
 
         private void btnVerListaGrupos_Click(object sender, EventArgs e)
         {
-            VerListaGrupos form = new VerListaGrupos();
+            VerListaGrupos2 form = new VerListaGrupos2();
             form.Show();
 
             this.Hide();
@@ -73,6 +103,11 @@ namespace Proyecto_Calificaciones
             form.Show();
 
             this.Hide();
+        }
+
+        private void panelSistema_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

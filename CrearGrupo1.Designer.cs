@@ -49,40 +49,45 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(375, 63);
+            this.label1.Location = new System.Drawing.Point(188, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 25);
+            this.label1.Size = new System.Drawing.Size(138, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrese el nombre del grupo";
             // 
             // txtNombreGrupo
             // 
-            this.txtNombreGrupo.Location = new System.Drawing.Point(380, 111);
+            this.txtNombreGrupo.Location = new System.Drawing.Point(190, 58);
+            this.txtNombreGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombreGrupo.Name = "txtNombreGrupo";
-            this.txtNombreGrupo.Size = new System.Drawing.Size(275, 31);
+            this.txtNombreGrupo.Size = new System.Drawing.Size(140, 20);
             this.txtNombreGrupo.TabIndex = 1;
             // 
             // txtCantidadApartados
             // 
-            this.txtCantidadApartados.Location = new System.Drawing.Point(389, 279);
+            this.txtCantidadApartados.Location = new System.Drawing.Point(194, 145);
+            this.txtCantidadApartados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCantidadApartados.Name = "txtCantidadApartados";
-            this.txtCantidadApartados.Size = new System.Drawing.Size(300, 31);
+            this.txtCantidadApartados.Size = new System.Drawing.Size(152, 20);
             this.txtCantidadApartados.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(375, 225);
+            this.label2.Location = new System.Drawing.Point(188, 117);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(326, 25);
+            this.label2.Size = new System.Drawing.Size(162, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ingrese la cantidad de apartados";
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(389, 428);
+            this.btnSiguiente.Location = new System.Drawing.Point(194, 223);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(231, 85);
+            this.btnSiguiente.Size = new System.Drawing.Size(116, 44);
             this.btnSiguiente.TabIndex = 4;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
@@ -97,17 +102,19 @@
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(355, 676);
+            this.panelMenu.Size = new System.Drawing.Size(178, 352);
             this.panelMenu.TabIndex = 5;
             // 
             // btnSalir
             // 
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Location = new System.Drawing.Point(121, 501);
+            this.btnSalir.Location = new System.Drawing.Point(60, 261);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(228, 112);
+            this.btnSalir.Size = new System.Drawing.Size(114, 58);
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -117,9 +124,10 @@
             // 
             this.btnEliminarGrupo.FlatAppearance.BorderSize = 0;
             this.btnEliminarGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarGrupo.Location = new System.Drawing.Point(121, 383);
+            this.btnEliminarGrupo.Location = new System.Drawing.Point(60, 199);
+            this.btnEliminarGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminarGrupo.Name = "btnEliminarGrupo";
-            this.btnEliminarGrupo.Size = new System.Drawing.Size(228, 112);
+            this.btnEliminarGrupo.Size = new System.Drawing.Size(114, 58);
             this.btnEliminarGrupo.TabIndex = 9;
             this.btnEliminarGrupo.Text = "Eliminar grupo";
             this.btnEliminarGrupo.UseVisualStyleBackColor = true;
@@ -129,9 +137,10 @@
             // 
             this.btnVerListaGrupos.FlatAppearance.BorderSize = 0;
             this.btnVerListaGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerListaGrupos.Location = new System.Drawing.Point(121, 256);
+            this.btnVerListaGrupos.Location = new System.Drawing.Point(60, 133);
+            this.btnVerListaGrupos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVerListaGrupos.Name = "btnVerListaGrupos";
-            this.btnVerListaGrupos.Size = new System.Drawing.Size(228, 112);
+            this.btnVerListaGrupos.Size = new System.Drawing.Size(114, 58);
             this.btnVerListaGrupos.TabIndex = 8;
             this.btnVerListaGrupos.Text = "Ver lista de grupos";
             this.btnVerListaGrupos.UseVisualStyleBackColor = true;
@@ -141,9 +150,10 @@
             // 
             this.btnCrearNuevoGrupo.FlatAppearance.BorderSize = 0;
             this.btnCrearNuevoGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearNuevoGrupo.Location = new System.Drawing.Point(121, 138);
+            this.btnCrearNuevoGrupo.Location = new System.Drawing.Point(60, 72);
+            this.btnCrearNuevoGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCrearNuevoGrupo.Name = "btnCrearNuevoGrupo";
-            this.btnCrearNuevoGrupo.Size = new System.Drawing.Size(228, 112);
+            this.btnCrearNuevoGrupo.Size = new System.Drawing.Size(114, 58);
             this.btnCrearNuevoGrupo.TabIndex = 7;
             this.btnCrearNuevoGrupo.Text = "Crear Nuevo Grupo";
             this.btnCrearNuevoGrupo.UseVisualStyleBackColor = true;
@@ -154,8 +164,9 @@
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(355, 100);
+            this.panel1.Size = new System.Drawing.Size(178, 52);
             this.panel1.TabIndex = 5;
             // 
             // btnMenu
@@ -164,9 +175,10 @@
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.Location = new System.Drawing.Point(6, 12);
+            this.btnMenu.Location = new System.Drawing.Point(3, 6);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(56, 76);
+            this.btnMenu.Size = new System.Drawing.Size(28, 40);
             this.btnMenu.TabIndex = 6;
             this.btnMenu.Text = "☰";
             this.btnMenu.UseVisualStyleBackColor = false;
@@ -180,19 +192,22 @@
             this.panelSistema.Controls.Add(this.txtNombreGrupo);
             this.panelSistema.Controls.Add(this.txtCantidadApartados);
             this.panelSistema.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSistema.Location = new System.Drawing.Point(355, 0);
+            this.panelSistema.Location = new System.Drawing.Point(178, 0);
+            this.panelSistema.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelSistema.Name = "panelSistema";
-            this.panelSistema.Size = new System.Drawing.Size(1087, 676);
+            this.panelSistema.Size = new System.Drawing.Size(507, 352);
             this.panelSistema.TabIndex = 7;
+            this.panelSistema.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSistema_Paint);
             // 
             // CrearGrupo1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1442, 676);
+            this.ClientSize = new System.Drawing.Size(685, 352);
             this.Controls.Add(this.panelSistema);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "CrearGrupo1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
